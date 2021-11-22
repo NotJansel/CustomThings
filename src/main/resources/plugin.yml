@@ -1,0 +1,40 @@
+name: CustomThings
+version: ${project.version}
+main: de.notjansel.customthings.Main
+api-version: 1.17
+
+commands:
+  craft:
+  customcraft:
+  givecustom:
+    permission: customthings.givecustom
+  discord:
+    aliases: dc
+  broadcast:
+    aliases: bc
+    permission: customthings.broadcast
+  heal:
+    permission: customthings.heal
+  money:
+  addmoney:
+    permission: customthings.addmoney
+  removemoney:
+    permission: customthings.removemoney
+
+permissions:
+  customthings.*:
+    description: Access to all Commands
+    children:
+      customthings.heal: true
+      customthings.givecustom: true
+      customthings.broadcast: true
+  customthings.heal:
+    description: Access to the heal command
+  customthings.givecustom:
+    description: Access to the menu with all custom items
+  customthings.broadcast:
+    description: Access to the broadcast command to annoy people
+  customthings.addmoney:
+    description: Permission to add Money to a player
+  customthings.removemoney:
+    description: Permission to remove Money from a player
